@@ -1,0 +1,19 @@
+﻿@model PhotosIndexVM[]
+@using WebApiDemoMVC.Models.ViewModels
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Photos</title>
+</head>
+<body>
+    <h1>Photos</h1>
+    @foreach (var photo in Model)
+    {
+        <p>
+            @photo.Title
+            <br />
+            <img height="100" src="@photo.URL" />
+        </p>
+    }
+</body>
+</html>
